@@ -1,18 +1,24 @@
 $(function() {
-   var appCheck = function() {
+    var appStoreLink = "http://apple.com";
+
+    var appCheck = function(fail) {
         var now = new Date().valueOf();
-        setTimeout(function () {
-            if (new Date().valueOf() - now > 100) return;
-            window.location = "http://nike.com";
-        }, 25);
-        window.location = "nikeplusrunning://x-callback-url/create/run?distance=5000.3";
-   },
-   linkClick = function() {
-        $('#applink').click(function() {
-            appCheck();
+        setTimeout(function() {
+            console.log('timeout');
+            if (new Date().valueOf() - now > 500){
+                window.location = appStoreLink;
+                console.log('should send');
+            }
+        }, 500);
+        //window.location = "nikeplusrunning://x-callback-url/create/run?distance=5000.3";
+    },
+    linkClick = function() {
+        $('#applink').click(function(e) {
+            e.preventDefault();
+            appCheck(appStoreLink);
         });
-   },
-   init = function() {
-       linkClick();
-   }();
+    },
+    init = function() {
+        linkClick();
+    }();
 });
