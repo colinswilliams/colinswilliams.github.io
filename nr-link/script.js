@@ -13,8 +13,8 @@ $(function() {
         //window.location = "nikeplusrunning://x-callback-url/create/run?distance=5000.3";
     },
     linkClick = function() {
-        $('#applink').click(function(e) {
-            e.preventDefault();
+        $('#applink').click(function() {
+            //e.preventDefault();
             appCheck(appStoreLink);
         });
     },
