@@ -11,12 +11,19 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+
     </head>
 
     <body>
-        <a id="applink" href="nikeplusrunning://x-callback-url/create/run?distance=5000.3">N+R app</a>
+    <form action="http://apple.com">
+        <input type="submit" value="Download" />
+    </form>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <form action="nikeplusrunning://x-callback-url/create/run?distance=5000.3">
+        <input type="submit" value="Open App" />
+    </form>
+
     </body>
 </html>
